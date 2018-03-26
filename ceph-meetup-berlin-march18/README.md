@@ -1,3 +1,3 @@
-This is my presentation for Ceph Day Germany Feb. 2018 https://ceph.com/cephdays/germany/
+Presentation for Ceph Meetup Berlin 26.04.18
 
 * Ceph Management and Monitoring with openATTIC

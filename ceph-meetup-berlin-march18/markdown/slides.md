@@ -62,32 +62,30 @@
 
 ---
 
-# Salt
+# Salt & DeepSea
+
+--
+
+### DeepSea
+
+#### A collection of Salt files for deploying, managing and automating all aspects of a Ceph cluster
+https://github.com/suse/deepsea
 
 --
 
 ### Why did we choose Salt?
 
-* Massive scalability and resilient environments
+* Scalable and resilient
+* Speed (no SSH)
 * Parallel execution
-* Speed
-* Easy to get started 
-* Active and still growing community
-
----
-
-# DeepSea
-
---
- 
-DeepSea is a collection of Salt files for deploying, managing and automating all aspects of a Ceph cluster
+* Extensible
 
 --
 
 ### Current Status
 
-* Automatic discovery, deployment, configuration and life cycle 
-* Initial support for importing other Ceph clusters ( deployed via ceph-deploy)
+* Automatic discovery, deployment, configuration and life cycle
+* Initial support for importing other Ceph clusters (deployed via ceph-deploy)
 * RADOS Gateway deployment (for single site deployments)
 * CephFS MDS deployment and CephFS creation
 * Sharing CephFS or S3 buckets via NFS Ganesha
@@ -97,8 +95,9 @@ DeepSea is a collection of Salt files for deploying, managing and automating all
 ### ... there is more
 
 * iSCSI target management via lrbd
-* Deployment and configuration of Prometheus and Grafana 
-* Deployment and configuration of openATTIC 
+* Automated upgrades
+* Deployment and configuration of Prometheus and Grafana
+* Deployment and configuration of openATTIC
 
 ---
 
@@ -110,7 +109,7 @@ DeepSea is a collection of Salt files for deploying, managing and automating all
 
 * Prometheus collects and stores time series data
 * Grafana makes it fit for human consumption
-* Usually just exposed via openATTIC dashboard
+* Exposed via openATTIC dashboard
 * Standalone dashboard still accessible
 
 ---
@@ -147,7 +146,6 @@ DeepSea is a collection of Salt files for deploying, managing and automating all
 * iSCSI target management (lrbd)
 * Ceph Object Gateway management (RGW Admin Ops API)
 * Support Ceph Luminous features (e.g. pool compression)
-* Web-based configuration
 * Detailed feedback to the user on how to resolve configuration issues
 
 ---
@@ -155,6 +153,12 @@ DeepSea is a collection of Salt files for deploying, managing and automating all
 #### openATTIC Architecture
 
 <img src="images/openattic-architecture.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+### Demo Time
+
+<img src="images/openattic-login.png" style="background:none; border:none; box-shadow:none;">
 
 ---
 
@@ -171,3 +175,35 @@ DeepSea is a collection of Salt files for deploying, managing and automating all
 ### openATTIC goes upstream!
 
 <img src="images/upstream-login.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+#### ~5 weeks ago
+
+* openATTIC goes upstream - Dashboard V2
+* Will become the default as soon as superset of functionality is covered
+* Initial work is up for review on github <a href="https://github.com/openattic/ceph" target="_blank">https://github.com/openattic/ceph</a>
+
+--
+
+#### openATTIC is now dashboard
+
+* Initial PR <a href="https://github.com/ceph/ceph/pull/20103">#20103</a> merged 20 days ago
+* went from dashboard_v2 &rarr; dashboard
+* Feature parity with original dashboard
+* More and more management capabilities are added
+* Will likely play a role in containerized ceph
+
+--
+
+Live Demo
+<img src="images/upstream-login.png" style="background:none; border:none; box-shadow:none;">
+
+--
+
+Live Demo (currently broken  ╯°□°╯ ┻━┻)
+<a href="http://demo.openattic.org" target="_blank"><img src="images/openattic-login.png" />demo.openattic.org</a>
+
+--
+
+### Questions?
